@@ -30,7 +30,8 @@ const TaskList: React.FC<TaskListProps> = ({
             onChange={() => handleToggleComplete(task.id)}
             sx={{ marginRight: 2 }}
           />
-          <ListItemText primary={task.name} />
+          <ListItemText primary={task.name}
+          sx={{ marginRight: 2 }} />
           <Button
             variant="outlined"
             onClick={() => handleEditTask(task.id, task.name)}

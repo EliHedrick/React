@@ -80,19 +80,19 @@ const App: React.FC = () => {
   return (
     <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
       <Router>
-        <Box sx={{ padding: '20px', maxWidth: 400, margin: '0 auto' }}>
+        <Box sx={{ padding: '20px', maxWidth: 600, margin: '0 auto' }}>
           <h1>Task Manager</h1>
 
           {/* Task input field */}
-          <TextField
+            <TextField
             label={editingTaskId ? 'Edit Task' : 'New Task'}
             variant="outlined"
             fullWidth
             value={taskName}
             onChange={(e) => setTaskName(e.target.value)}
-            sx={{ marginBottom: 2 }}
+            sx={{ marginBottom: 2, '& .MuiInputLabel-root': { color: 'white' } }}
             data-testid="task-input"
-          />
+            />
 
           {/* Add or Save task button */}
           <Button
